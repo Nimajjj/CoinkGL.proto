@@ -10,15 +10,18 @@
 
 #include "renderer/order/order.h"
 #include "renderer/vertex_helper/vertex_helper.h"
-#include "type/type.h"
 #include "shader/shader.h"
-#include "shape/shape.h"
 #include "utils/utils.h"
+
+#include "type/type.h"
+#include "shape/shape.h"
+#include "shape/triangle/triangle.h"
+#include "shape/rect/rect.h"
+#include "shape/line/line.h"
+#include "shape/pixel/pixel.h"
 
 // TO DO :
 // - Limit 'use' ans 'unuse' of shader program when rendering InternalRenderer::Render()
-// - Move Order struct to Order class
-// - Try to limit wglGetProcAddress calls
 
 
 // private class of CoinkGL

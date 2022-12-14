@@ -27,15 +27,12 @@ void Init(const Size& scr_size, const std::string& title) {
 
   Shader::SetShadersDirectory("D:/development/prototypes/CoinkGL.engine.2/ressource/shader/");
 
-  Renderer::Init(screen_size);
-
   Utils::Log(Utils::INFO, "CoinkGL initialisation OK");
 }
 
 void Terminate() {
   Utils::Log(Utils::INFO, "Closing CoinkGL ...");
 
-  Renderer::Close();
   glfwTerminate();
 
   Utils::Log(Utils::INFO, "Closing CoinkGL OK");

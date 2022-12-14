@@ -12,7 +12,8 @@ Order::Order(const SHAPE_TYPE& vID, const uint& beg, const uint& en) :
 
 
 // setters
-bool Order::RemoveShape(const ShapePtr& shape) {
+bool
+Order::RemoveShape(const ShapePtr& shape) {
   auto it = std::find(shape_list.begin(), shape_list.end(), shape);
   if (it != shape_list.end()) {
     shape_list.erase(it);
@@ -21,13 +22,15 @@ bool Order::RemoveShape(const ShapePtr& shape) {
   return false;
 }
 
-void Order::MoveBegin(const uint& beg) {
+void
+Order::MoveBegin(const uint& beg) {
   begin += beg;
   if (begin < 0)
     begin = 0;
 }
 
-void Order::MoveEnd(const uint& en) {
+void
+Order::MoveEnd(const uint& en) {
   end += en;
   if (end < 0)
     end = 0;

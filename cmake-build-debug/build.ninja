@@ -119,6 +119,13 @@ build CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/shader/shader.cpp.obj: CXX_CO
   OBJECT_DIR = CMakeFiles\CoinkGL_engine_2.dir
   OBJECT_FILE_DIR = CMakeFiles\CoinkGL_engine_2.dir\src\coink_gl\shader
 
+build CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/shape/shape.cpp.obj: CXX_COMPILER__CoinkGL_engine_2_Debug D$:/Development/prototypes/CoinkGL.engine.2/src/coink_gl/shape/shape.cpp || cmake_object_order_depends_target_CoinkGL_engine_2
+  DEP_FILE = CMakeFiles\CoinkGL_engine_2.dir\src\coink_gl\shape\shape.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++20
+  INCLUDES = -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl
+  OBJECT_DIR = CMakeFiles\CoinkGL_engine_2.dir
+  OBJECT_FILE_DIR = CMakeFiles\CoinkGL_engine_2.dir\src\coink_gl\shape
+
 build CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/type/linked_list.cpp.obj: CXX_COMPILER__CoinkGL_engine_2_Debug D$:/Development/prototypes/CoinkGL.engine.2/src/coink_gl/type/linked_list.cpp || cmake_object_order_depends_target_CoinkGL_engine_2
   DEP_FILE = CMakeFiles\CoinkGL_engine_2.dir\src\coink_gl\type\linked_list.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++20
@@ -148,7 +155,7 @@ build CMakeFiles/CoinkGL_engine_2.dir/src/main.cpp.obj: CXX_COMPILER__CoinkGL_en
 #############################################
 # Link the executable CoinkGL_engine_2.exe
 
-build CoinkGL_engine_2.exe: CXX_EXECUTABLE_LINKER__CoinkGL_engine_2_Debug CMakeFiles/CoinkGL_engine_2.dir/src/glad.c.obj CMakeFiles/CoinkGL_engine_2.dir/src/stb.c.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/coink_gl.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/internal_renderer.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/order.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/renderer.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/vao/vao.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/vbo/vbo.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/vertex_helper/vertex_helper.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/shader/shader.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/type/linked_list.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/utils/utils.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/main.cpp.obj
+build CoinkGL_engine_2.exe: CXX_EXECUTABLE_LINKER__CoinkGL_engine_2_Debug CMakeFiles/CoinkGL_engine_2.dir/src/glad.c.obj CMakeFiles/CoinkGL_engine_2.dir/src/stb.c.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/coink_gl.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/internal_renderer.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/order.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/renderer.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/vao/vao.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/vbo/vbo.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/renderer/vertex_helper/vertex_helper.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/shader/shader.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/shape/shape.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/type/linked_list.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/coink_gl/utils/utils.cpp.obj CMakeFiles/CoinkGL_engine_2.dir/src/main.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lglfw3  -lglfw3dll  -lfreetype  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   LINK_PATH = -LD:/Development/prototypes/CoinkGL.engine.2/lib/GLFW   -LD:/Development/prototypes/CoinkGL.engine.2/lib/freetype

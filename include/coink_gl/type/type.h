@@ -7,8 +7,8 @@
 #include "color.h"
 #include "linked_list.h"
 
+
 typedef unsigned int uint;
 typedef Vec2 Size;
 typedef Vec2 Point;
-
 

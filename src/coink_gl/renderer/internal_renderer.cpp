@@ -19,7 +19,8 @@ InternalRenderer::~InternalRenderer() {
 }
 
 
-void InternalRenderer::GenerateVertices() {
+void
+InternalRenderer::GenerateVertices() {
   Utils::Log(Utils::INFO, "Generating vertices ...");
 
   FreeShapes();
@@ -37,15 +38,17 @@ void InternalRenderer::GenerateVertices() {
 
   helper->UpdateBufferData();
 
-  Utils::Log(Utils::INFO, "Generating vertices ...OK");
+  Utils::Log(Utils::INFO, "Generating vertices OK");
 
 }
 
-void InternalRenderer::Clear() {
+void
+InternalRenderer::Clear() {
   helper->ClearVertices();
 }
 
-void InternalRenderer::Render() {
+void
+InternalRenderer::Render() {
   if (shader == nullptr) return;
 
   shader->Use();
@@ -59,14 +62,16 @@ void InternalRenderer::Render() {
   }
 }
 
-void InternalRenderer::QueueFree(const ShapePtr& shape) {
+void
+InternalRenderer::QueueFree(const ShapePtr& shape) {
   queue_free_list.push_back(shape);
 }
 
-void InternalRenderer::QueueShape(const ShapePtr& shape) {
+void
+InternalRenderer::QueueShape(const ShapePtr& shape) {
   // if there is no order, create one, and add the shape to it
   if (order_list.size() == 0) {
-    auto new_order = OrderPtr(new Order(shape->type, 0, shape->GetVerticesCount()));
+    auto new_order = OrderPtr(new Order(shape->GetShapeType(), 0, shape->GetVerticesCount()));
     new_order->AddShape(shape);
     new_order->SetDrawType(shape->GetDrawType());
 
@@ -86,7 +91,7 @@ void InternalRenderer::QueueShape(const ShapePtr& shape) {
   // if the shape type is different, create a new order
   auto new_order = OrderPtr(
     new Order(
-      shape->type,
+      shape->GetShapeType(),
       order_list.back()->GetEnd(),
       order_list.back()->GetEnd() + shape->GetVerticesCount()
       )
@@ -100,10 +105,11 @@ void InternalRenderer::QueueShape(const ShapePtr& shape) {
 
 
 
-void InternalRenderer::AddShapeVertices(const ShapePtr& p_shape) {
+void
+InternalRenderer::AddShapeVertices(const ShapePtr& p_shape) {
   Shape* shape = p_shape.get();
 
-  switch (shape->type) {
+  switch (shape->GetShapeType()) {
     case SHAPE_BASE:
       Utils::Log(Utils::ERROR, "InternalRenderer::AddShapeVertices() try to update a SHAPE_BASE");
       break;
@@ -136,83 +142,89 @@ void InternalRenderer::AddShapeVertices(const ShapePtr& p_shape) {
 }
 
 
-void InternalRenderer::AddTriangleVertices(Shape* shape) {
+void
+InternalRenderer::AddTriangleVertices(Shape* shape) {
   auto triangle = static_cast<Triangle*>(shape);
 
   helper->VerticesPushVec2({NormalizeWidth(triangle->aPos.x), NormalizeHeight(triangle->aPos.y)});
-  helper->VerticesPushColor(triangle->color);
+  helper->VerticesPushColor(triangle->GetColor());
 
   helper->VerticesPushVec2({NormalizeWidth(triangle->bPos.x), NormalizeHeight(triangle->bPos.y)});
-  helper->VerticesPushColor(triangle->color);
+  helper->VerticesPushColor(triangle->GetColor());
 
   helper->VerticesPushVec2({NormalizeWidth(triangle->cPos.x), NormalizeHeight(triangle->cPos.y)});
-  helper->VerticesPushColor(triangle->color);
+  helper->VerticesPushColor(triangle->GetColor());
 }
 
-void InternalRenderer::AddRectVertices(Shape* shape) {
+void
+InternalRenderer::AddRectVertices(Shape* shape) {
   auto rect = static_cast<Rect*>(shape);
 
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x), NormalizeHeight(rect->position.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x + rect->size.x), NormalizeHeight(rect->position.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
 
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x + rect->size.x), NormalizeHeight(rect->position.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x + rect->size.x),
                             NormalizeHeight(rect->position.y + rect->size.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
 
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x + rect->size.x),
                             NormalizeHeight(rect->position.y + rect->size.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x), NormalizeHeight(rect->position.y + rect->size.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
 
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x), NormalizeHeight(rect->position.y + rect->size.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x), NormalizeHeight(rect->position.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
 }
 
-void InternalRenderer::AddFillRectVertices(Shape* shape) {
+void
+InternalRenderer::AddFillRectVertices(Shape* shape) {
   auto rect = static_cast<Rect*>(shape);
 
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x), NormalizeHeight(rect->position.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x + rect->size.x), NormalizeHeight(rect->position.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x), NormalizeHeight(rect->position.y + rect->size.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
 
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x + rect->size.x),
                             NormalizeHeight(rect->position.y + rect->size.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x + rect->size.x), NormalizeHeight(rect->position.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x), NormalizeHeight(rect->position.y + rect->size.y)});
-  helper->VerticesPushColor(rect->color);
+  helper->VerticesPushColor(rect->GetColor());
 
 }
 
-void InternalRenderer::AddPixelVertices(Shape* shape) {
+void
+InternalRenderer::AddPixelVertices(Shape* shape) {
   auto pixel = static_cast<Pixel*>(shape);
 
   helper->VerticesPushVec2({NormalizeWidth(pixel->position.x), NormalizeHeight(pixel->position.y)});
-  helper->VerticesPushColor(pixel->color);
+  helper->VerticesPushColor(pixel->GetColor());
 }
 
-void InternalRenderer::AddLineVertices(Shape* shape) {
+void
+InternalRenderer::AddLineVertices(Shape* shape) {
   auto line = static_cast<Line*>(shape);
 
   helper->VerticesPushVec2({NormalizeWidth(line->pos1.x), NormalizeHeight(line->pos1.y)});
-  helper->VerticesPushColor(line->color);
+  helper->VerticesPushColor(line->GetColor());
   helper->VerticesPushVec2({NormalizeWidth(line->pos2.x), NormalizeHeight(line->pos2.y)});
-  helper->VerticesPushColor(line->color);
+  helper->VerticesPushColor(line->GetColor());
 }
 
 
-void InternalRenderer::FreeShapes() {
+void
+InternalRenderer::FreeShapes() {
   // If there is no order, there is no shape
   if (queue_free_list.empty())
     return;
@@ -227,7 +239,7 @@ void InternalRenderer::FreeShapes() {
   for (const auto& shape_ptr : queue_free_list) {
     for (const auto& order_ptr : order_list) {
 
-      // If the order contains the shape, we save the vertex range of shape
+      // If the order contains the shape, we save the vertex range of shape,
       //  and we remove the shape from the order
       if (order_ptr->Contain(shape_ptr)) {
         range_modif -= shape_ptr->GetVerticesCount();
