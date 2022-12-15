@@ -8,6 +8,11 @@ struct Color {
 
   Color() : r(0.0), g(0.0), b(0.0), a(0xFF) {};
   Color(const double& p_r, const double& p_g, const double& p_b, const double& p_a = 0xFF) : r(p_r), g(p_g), b(p_b), a(p_a) {}
+
+  friend std::ostream& operator<<(std::ostream& os, const Color& col) {
+    os << "Color(" << col.r << ", " << col.g << ", " << col.b << ", " << col.a << ")";
+    return os;
+  }
 };
 
 
