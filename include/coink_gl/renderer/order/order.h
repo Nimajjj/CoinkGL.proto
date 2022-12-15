@@ -47,4 +47,4 @@ class Order {
   int end;
 };
 
-typedef std::shared_ptr<Order> OrderPtr;
+using OrderPtr = std::shared_ptr<Order>;

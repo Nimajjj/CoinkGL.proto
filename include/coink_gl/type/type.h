@@ -3,13 +3,10 @@
 //
 #pragma once
 #include "vec2.h"
-#include "vec3.h"
 #include "color.h"
 #include "coink_enum.h"
-#include "linked_list.h"
 
 
-typedef unsigned int uint;
-typedef Vec2 Size;
-typedef Vec2 Point;
-
+using uint = unsigned int;
+using Size = Vec2;
+using Point = Vec2;

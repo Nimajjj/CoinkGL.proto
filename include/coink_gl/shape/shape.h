@@ -5,21 +5,12 @@
 #pragma once
 
 #include <iostream>
+#include <memory>
 
 #include <glad/glad.h>
 
 #include "type/type.h"
 
-typedef unsigned int uint;
-
-enum SHAPE_TYPE {
-  SHAPE_BASE,
-  SHAPE_TRIANGLE,
-  SHAPE_RECT,
-  SHAPE_FILL_RECT,
-  SHAPE_PIXEL,
-  SHAPE_LINE
-};
 
 class Shape {
  public:
@@ -50,7 +41,5 @@ class Shape {
   uint vertices_count;
 };
 
-typedef std::shared_ptr<Shape> ShapePtr;
 
-
-
+using ShapePtr = std::shared_ptr<Shape>;

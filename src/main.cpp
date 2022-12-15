@@ -11,14 +11,9 @@ const std::string SCR_TITLE = "CoinkGL.engine [prototype] 0.0.2";
 
 int main() {
   CoinkGL::Init(SCR_SIZE, SCR_TITLE);
-  auto r = Renderer(SCR_SIZE);
-
-  r.Update();
 
   while (CoinkGL::ShouldNotClose()) {
     CoinkGL::BeginLoop();
-
-    r.Render();
 
     CoinkGL::EndLoop();
   }
