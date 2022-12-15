@@ -6,16 +6,16 @@
 
 void
 Renderer::Init(const Size& scr_size) {
-  Utils::Log(Utils::INFO, "Renderer initializing ...");
+  Utils::Log(INFO, "Renderer initializing ...");
   internal_renderer = std::make_unique<InternalRenderer>(scr_size);
-  Utils::Log(Utils::INFO, "Renderer initialization OK");
+  Utils::Log(INFO, "Renderer initialization OK");
 }
 
 void
 Renderer::Close() {
-  Utils::Log(Utils::INFO, "Closing Renderer ...");
+  Utils::Log(INFO, "Closing Renderer ...");
   // ...
-  Utils::Log(Utils::INFO, "Closing Renderer OK");
+  Utils::Log(INFO, "Closing Renderer OK");
 }
 
 void

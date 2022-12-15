@@ -12,7 +12,7 @@
 
 
 
-// Facade for rendering
+// Singleton facade for user-friendly basic rendering
 // Depend on InternalRenderer class
 class Renderer {
  public:

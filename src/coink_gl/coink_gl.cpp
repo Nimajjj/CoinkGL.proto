@@ -18,7 +18,7 @@ Size screen_size = Size();
 
 // MAIN ----------
 void Init(const Size& scr_size, const std::string& title) {
-  Utils::Log(Utils::INFO, "Initalizing CoinkGL ...");
+  Utils::Log(INFO, "Initalizing CoinkGL ...");
 
   screen_size = scr_size;
 
@@ -27,15 +27,15 @@ void Init(const Size& scr_size, const std::string& title) {
 
   Shader::SetShadersDirectory("D:/development/prototypes/CoinkGL.engine.2/ressource/shader/");
 
-  Utils::Log(Utils::INFO, "CoinkGL initialisation OK");
+  Utils::Log(INFO, "CoinkGL initialisation OK");
 }
 
 void Terminate() {
-  Utils::Log(Utils::INFO, "Closing CoinkGL ...");
+  Utils::Log(INFO, "Closing CoinkGL ...");
 
   glfwTerminate();
 
-  Utils::Log(Utils::INFO, "Closing CoinkGL OK");
+  Utils::Log(INFO, "Closing CoinkGL OK");
 }
 
 
@@ -76,28 +76,28 @@ static int InitGlfw(const std::string& p_title) {
   window = glfwCreateWindow(screen_size.x, screen_size.y, p_title.c_str(),
                             NULL, NULL);
   if (window == NULL) {
-    Utils::Log(Utils::FATAL, "GLFW failed to initialize window");
+    Utils::Log(FATAL, "GLFW failed to initialize window");
     glfwTerminate();
     return -1;
   }
   glfwMakeContextCurrent(window);
   glfwSetFramebufferSizeCallback(window, FramebufferSizeCallback);
 
-  Utils::Log(Utils::INFO, "GLFW window initialization OK");
+  Utils::Log(INFO, "GLFW window initialization OK");
   return 0;
 }
 
 static int InitGlad() {
   // glad: load all OpenGL function pointers
   if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-    Utils::Log(Utils::FATAL, "GLAD failed to initialize");
+    Utils::Log(FATAL, "GLAD failed to initialize");
     return -1;
   }
 
   glEnable(GL_BLEND);
   glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
-  Utils::Log(Utils::INFO, "GLAD initialization OK");
+  Utils::Log(INFO, "GLAD initialization OK");
   return 0;
 }
 

@@ -5,18 +5,12 @@
 #include <string>
 #include <iostream>
 
-namespace Utils {
-enum LOG_LEVEL {
-  FATAL,
-  ERROR,
-  WARN,
-  INFO,
-  DEBUG
-};
+#include "type/type.h"
 
+namespace Utils {
 // https://stackoverflow.com/questions/997946/how-to-get-current-time-and-date-in-c
 const std::string GetCurrentDateTime();
-void Log(const Utils::LOG_LEVEL& p_log_level, const std::string& p_message);
+void Log(const COINK_LOG_LEVEL& p_log_level, const std::string& p_message);
 
 void EnableLog();
 void EnableInfoLog();

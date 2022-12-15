@@ -5,6 +5,7 @@
 #include "vec2.h"
 #include "vec3.h"
 #include "color.h"
+#include "coink_enum.h"
 #include "linked_list.h"
 
 

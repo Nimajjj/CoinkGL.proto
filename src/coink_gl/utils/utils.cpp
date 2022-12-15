@@ -11,7 +11,7 @@ bool info_log = true;
 bool debug_log = false;
 }
 
-static std::string GetTextLogLevel(const Utils::LOG_LEVEL& p_log_level) {
+static std::string GetTextLogLevel(const COINK_LOG_LEVEL& p_log_level) {
   switch (p_log_level) {
     case FATAL:
       return "FATAL";
@@ -43,10 +43,10 @@ const std::string GetCurrentDateTime() {
 }
 
 
-void Log(const Utils::LOG_LEVEL& p_log_level, const std::string& p_message) {
+void Log(const COINK_LOG_LEVEL& p_log_level, const std::string& p_message) {
   if (!all_log) return;
-  if (p_log_level == Utils::LOG_LEVEL::INFO && !info_log) return;
-  if (p_log_level == Utils::LOG_LEVEL::DEBUG && !debug_log) return;
+  if (p_log_level == COINK_LOG_LEVEL::INFO && !info_log) return;
+  if (p_log_level == COINK_LOG_LEVEL::DEBUG && !debug_log) return;
   std::cout << "[" << GetCurrentDateTime() << "] [" <<
                 GetTextLogLevel(p_log_level) << "] : "
                 << p_message << "\n";

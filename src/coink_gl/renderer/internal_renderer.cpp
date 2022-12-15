@@ -21,7 +21,7 @@ InternalRenderer::~InternalRenderer() {
 
 void
 InternalRenderer::GenerateVertices() {
-  Utils::Log(Utils::INFO, "Generating vertices ...");
+  Utils::Log(INFO, "Generating vertices ...");
 
   FreeShapes();
 
@@ -33,12 +33,12 @@ InternalRenderer::GenerateVertices() {
       AddShapeVertices(shape);
     }
 
-    Utils::Log(Utils::DEBUG, "InternalRenderer::GenerateVertices Vertices generated for order, goes from index " + std::to_string(order->GetBegin()) + " to " + std::to_string(order->GetEnd()));
+    Utils::Log(DEBUG, "InternalRenderer::GenerateVertices Vertices generated for order, goes from index " + std::to_string(order->GetBegin()) + " to " + std::to_string(order->GetEnd()));
   }
 
   helper->UpdateBufferData();
 
-  Utils::Log(Utils::INFO, "Generating vertices OK");
+  Utils::Log(INFO, "Generating vertices OK");
 
 }
 
@@ -111,7 +111,7 @@ InternalRenderer::AddShapeVertices(const ShapePtr& p_shape) {
 
   switch (shape->GetShapeType()) {
     case SHAPE_BASE:
-      Utils::Log(Utils::ERROR, "InternalRenderer::AddShapeVertices() try to update a SHAPE_BASE");
+      Utils::Log(ERROR, "InternalRenderer::AddShapeVertices() try to update a SHAPE_BASE");
       break;
 
     case SHAPE_TRIANGLE:
@@ -135,7 +135,7 @@ InternalRenderer::AddShapeVertices(const ShapePtr& p_shape) {
       break;
 
     default:
-      Utils::Log(Utils::ERROR, "InternalRenderer::AddShapeVertices() end of switch without break");
+      Utils::Log(ERROR, "InternalRenderer::AddShapeVertices() end of switch without break");
       break;
   }
 
@@ -229,7 +229,7 @@ InternalRenderer::FreeShapes() {
   if (queue_free_list.empty())
     return;
 
-  Utils::Log(Utils::INFO, "Removing free queued shapes ...");
+  Utils::Log(INFO, "Removing free queued shapes ...");
 
   // Prepare the list of order to remove in case there is one which no longer contain shapes
   std::vector<OrderPtr> order_to_remove;
@@ -259,7 +259,7 @@ InternalRenderer::FreeShapes() {
       order_list.erase(std::remove(order_list.begin(), order_list.end(), order_ptr), order_list.end());
     }
 
-    Utils::Log(Utils::DEBUG, "Order list begin and end moved of " + std::to_string(range_modif) + " vertices");
+    Utils::Log(DEBUG, "Order list begin and end moved of " + std::to_string(range_modif) + " vertices");
 
     // We reset the vertices range modifier
     range_modif = 0;
@@ -268,5 +268,5 @@ InternalRenderer::FreeShapes() {
   // We clear the list of shapes to remove
   queue_free_list.clear();
 
-  Utils::Log(Utils::INFO, "Removing free queued shapes OK");
+  Utils::Log(INFO, "Removing free queued shapes OK");
 }

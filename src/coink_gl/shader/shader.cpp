@@ -9,7 +9,7 @@ std::string GetFileContents(const char* filename);
 void CheckCompileErrors(unsigned int shader, std::string type);
 
 void Shader::Init(const std::string& vertex_path, const std::string& fragment_path) {
-  Utils::Log(Utils::INFO, "Creating shader ...");
+  Utils::Log(INFO, "Creating shader ...");
   // 1. retrieve the vertex/fragment source code from filePath
   std::string vertexCode = GetFileContents((shaders_directory + vertex_path).c_str());
   std::string fragmentCode = GetFileContents((shaders_directory + fragment_path).c_str());
@@ -38,7 +38,7 @@ void Shader::Init(const std::string& vertex_path, const std::string& fragment_pa
   glDeleteShader(vertex);
   glDeleteShader(fragment);
 
-  Utils::Log(Utils::INFO, "Creating shader OK");
+  Utils::Log(INFO, "Creating shader OK");
 }
 // activate the shader
 // ------------------------------------------------------------------------
@@ -60,7 +60,7 @@ void Shader::SetFloat(const std::string& name, float value) const {
 }
 
 void Shader::SetShadersDirectory(const std::string& path) {
-  Utils::Log(Utils::INFO, std::string("Setting shaders directory to ") + path);
+  Utils::Log(INFO, std::string("Setting shaders directory to ") + path);
   shaders_directory = path;
 }
 
@@ -76,13 +76,13 @@ void CheckCompileErrors(unsigned int shader, std::string type) {
     glGetShaderiv(shader, GL_COMPILE_STATUS, &success);
     if (!success) {
       glGetShaderInfoLog(shader, 1024, NULL, infoLog);
-      Utils::Log(Utils::ERROR, std::string("Shader compilation error of type: ") + type + "\n" + infoLog);
+      Utils::Log(ERROR, std::string("Shader compilation error of type: ") + type + "\n" + infoLog);
     }
   } else {
     glGetProgramiv(shader, GL_LINK_STATUS, &success);
     if (!success) {
       glGetProgramInfoLog(shader, 1024, NULL, infoLog);
-      Utils::Log(Utils::ERROR, std::string("Shader program linking error of type: ") + type + "\n" + infoLog);
+      Utils::Log(ERROR, std::string("Shader program linking error of type: ") + type + "\n" + infoLog);
     }
   }
 }
@@ -99,7 +99,7 @@ std::string GetFileContents(const char* filename) {
     in.close();
     return(contents);
   }
-  Utils::Log(Utils::ERROR,
+  Utils::Log(ERROR,
              std::string("file :") + filename + " at " + Shader::shaders_directory + " does not exist");
   throw(errno);
 }
