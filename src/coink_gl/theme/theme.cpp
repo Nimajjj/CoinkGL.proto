@@ -4,11 +4,6 @@
 
 #include "theme/theme.h"
 
-Theme
-Theme::New(const std::string& name) {
-  return Theme(name);
-}
-
 Theme::Theme(const std::string& name) :
   ID(Duck::New()),
   theme_name(name),
@@ -22,3 +17,4 @@ Theme::Theme(const std::string& name) :
   border_color_1(Color(0xa8, 0x99, 0x84)),
   border_color_2(Color(0x92, 0x83, 0x74))
 {}
+

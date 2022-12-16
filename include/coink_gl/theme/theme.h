@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include <memory>
 #include <string>
 
 #include "type/type.h"
@@ -16,10 +17,10 @@ class Theme {
   // properties
   const DUCK ID;
 
-  // main
 
+  // main
+  Theme(const std::string& name);
   ~Theme() = default;
-  static Theme New(const std::string& name);
 
   // getters
   const DUCK& GetID() const { return ID; }
@@ -60,7 +61,8 @@ class Theme {
   Color border_color_1;
   Color border_color_2;
 
-  // main
-  Theme(const std::string& name);
+
 
 };
+
+using ThemePtr = std::shared_ptr<Theme>;

@@ -8,7 +8,21 @@
 Node::Node() :
   ID(Duck::New()),
   node_type(NODE_NODE),
-  node_name("Node"),
+  node_name("Node_" + std::to_string(ID)),
+  position(Point(0,0)),
+  size(Size(0,0)),
+  rotation(0),
+  scale(Size(1,1)),
+  visible(true),
+  modulate(COLOR_WHITE),
+  self_modulate(COLOR_WHITE),
+  parent(nullptr)
+{}
+
+Node::Node(const NODE_TYPE& t, const std::string& n) :
+  ID(Duck::New()),
+  node_type(t),
+  node_name(n + "_" + std::to_string(ID)),
   position(Point(0,0)),
   size(Size(0,0)),
   rotation(0),

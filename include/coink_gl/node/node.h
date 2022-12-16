@@ -19,8 +19,13 @@ class Node :
  public:
   using NodePtr = std::shared_ptr<Node>;
 
+  // properties
+  const DUCK ID;
+  const NODE_TYPE node_type;
+
   // main
   Node();
+  Node(const NODE_TYPE& t, const std::string& n);
   ~Node() { Free(); }
 
 
@@ -68,8 +73,6 @@ class Node :
 
  protected:
   // properties
-  const DUCK ID;
-  const NODE_TYPE node_type;
   std::string node_name;
   Point position;
   Size size;
@@ -79,7 +82,7 @@ class Node :
   Color modulate;
   Color self_modulate;
 
-  // family
+    // family
   NodePtr parent;
   std::vector<NodePtr> children;
 

@@ -4,7 +4,7 @@
 
 #include "coink_gl.h"
 
-#include "node/node.h"
+#include "node/control/label/label.h"
 #include "theme/theme.h"
 
 
@@ -15,27 +15,22 @@ const std::string SCR_TITLE = "CoinkGL.engine [prototype] 0.0.2";
 int main() {
   CoinkGL::Init(SCR_SIZE, SCR_TITLE);
 
-  Theme theme = Theme::New("default");
+  auto root = std::make_shared<Node>();
 
-  NodePtr root = std::make_shared<Node>();
-  root->SetName("root");
+  auto control = std::make_shared<Control>();
 
-  NodePtr child = std::make_shared<Node>();
-  child->SetName("child 1");
-  root->AddChild(child);
-  child->SetParent(root);
+  auto label = std::make_shared<Label>("Hello World!");
+  label->SetPosition(Point(SCR_SIZE.x / 2, SCR_SIZE.y / 2));
 
-  NodePtr child2 = std::make_shared<Node>();
-  child2->SetName("child 2");
-  root->AddChild(child2);
-  child2->SetParent(root);
+  control->AddChild(label);
+  root->AddChild(control);
+  label->SetParent(control);
+  control->SetParent(root);
 
-  NodePtr child3 = std::make_shared<Node>();
-  child3->SetName("child 3");
-  root->AddChild(child3);
-  child3->SetParent(root);
+  root->DebugInfo();
+  control->DebugInfo();
+  label->DebugInfo();
 
-  root->DebugInfo(2);
 
   while (CoinkGL::ShouldNotClose()) {
     CoinkGL::BeginLoop();
