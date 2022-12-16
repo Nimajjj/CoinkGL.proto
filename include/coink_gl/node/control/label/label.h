@@ -6,6 +6,7 @@
 
 #include "node/control/control.h"
 
+
 class Label :
   public Control
 {
@@ -13,7 +14,6 @@ class Label :
   // main
   Label();
   Label(const std::string& t);
-  Label(const NODE_TYPE& t, const std::string& n);
   ~Label() { Free(); }
 
   // getters
@@ -32,5 +32,8 @@ class Label :
   std::string text;
   TEXT_ALIGNMENT h_alignment;
   TEXT_ALIGNMENT v_alignment;
+
+  // main
+  Label(const NODE_TYPE& t, const std::string& n);
 
 };

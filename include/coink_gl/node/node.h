@@ -25,7 +25,6 @@ class Node :
 
   // main
   Node();
-  Node(const NODE_TYPE& t, const std::string& n);
   ~Node() { Free(); }
 
 
@@ -88,6 +87,8 @@ class Node :
 
 
   // main
+  Node(const NODE_TYPE& t, const std::string& n);
+
   void Free();
   void FreeChildren();
   NodePtr ThisPtr() { return shared_from_this(); }

@@ -60,7 +60,7 @@ void VertexHelper::SetVertices(const std::vector<float>& v) {
 }
 
 void VertexHelper::ClearVertices() {
-  if (vertices.size() == 0) return;
+  if (vertices.empty()) return;
   vertices.clear();
 }
 

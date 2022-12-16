@@ -25,7 +25,7 @@
 
 
 // private class of CoinkGL
-// refer to facade class Renderer for safe rendering utilisation
+// refer to singleton facade class Renderer for safe rendering utilisation
 class InternalRenderer {
  public:
   InternalRenderer(const Size& scr_size);
@@ -56,8 +56,8 @@ class InternalRenderer {
 
 
   // Normalized coordinates from screen coordinates (0 to screen_size) to OpenGL coordinate (-1 to 1)
-  float NormalizeWidth(const float& x) const {return x / (screen_size.x / 2) - 1;}
-  float NormalizeHeight(const float& y) const {return y / (screen_size.y / 2) - 1;}
+  [[nodiscard]] float NormalizeWidth(const float& x) const {return x / (static_cast<float>(screen_size.x) / 2.0F) - 1.0F;}
+  [[nodiscard]] float NormalizeHeight(const float& y) const {return y / (static_cast<float>(screen_size.y) / 2.0F) - 1.0F;}
 
   // Add vertices of a shape to the VertexHelper for later rendering,
   //  depends on the shape type,

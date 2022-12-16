@@ -13,7 +13,6 @@ class Control :
  public:
   // main
   Control();
-  Control(const NODE_TYPE& t, const std::string& n);
   ~Control() { Free(); }
 
   // getters
@@ -22,8 +21,10 @@ class Control :
   // setters
   void SetTheme(const ThemePtr& t) { p_theme = t; }
 
- private:
+ protected:
   // properties
   ThemePtr p_theme;
 
+  // main
+  Control(const NODE_TYPE& t, const std::string& n);
 };

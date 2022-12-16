@@ -5,14 +5,14 @@
 #include "coink_gl/node/control/Label/label.h"
 
 Label::Label() :
-  Control(NODE_LABEL, "Label"),
+  Control(NODE_LABEL, "label"),
   text(""),
   h_alignment(TEXT_ALIGN_LEFT),
   v_alignment(TEXT_ALIGN_TOP)
 {}
 
 Label::Label(const std::string& t) :
-  Control(NODE_LABEL, "Label"),
+  Control(NODE_LABEL, "label"),
   text(t),
   h_alignment(TEXT_ALIGN_LEFT),
   v_alignment(TEXT_ALIGN_TOP)

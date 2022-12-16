@@ -138,7 +138,15 @@
 				13,
 				14,
 				15,
-				16
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24
 			]
 		}
 	],
@@ -216,7 +224,15 @@
 				13,
 				14,
 				15,
-				16
+				16,
+				17,
+				18,
+				19,
+				20,
+				21,
+				22,
+				23,
+				24
 			]
 		}
 	],
@@ -243,6 +259,30 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/button/button.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/button/check_button/check_button.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/button/menu_button/menu_button.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/button/option_button/option_button.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
 			"path" : "src/coink_gl/node/control/control.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -250,6 +290,30 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "src/coink_gl/node/control/label/label.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/panel/color_panel/color_panel.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/panel/panel.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/tab_bar/tab_bar.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/text_edit/text_edit.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
