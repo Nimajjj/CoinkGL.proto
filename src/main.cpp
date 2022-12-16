@@ -5,6 +5,7 @@
 #include "coink_gl.h"
 
 #include "node/node.h"
+#include "theme/theme.h"
 
 
 const Size SCR_SIZE = {1920, 1080};
@@ -13,6 +14,8 @@ const std::string SCR_TITLE = "CoinkGL.engine [prototype] 0.0.2";
 
 int main() {
   CoinkGL::Init(SCR_SIZE, SCR_TITLE);
+
+  Theme theme = Theme::New("default");
 
   NodePtr root = std::make_shared<Node>();
   root->SetName("root");

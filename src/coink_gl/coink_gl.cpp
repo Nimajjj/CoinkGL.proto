@@ -10,6 +10,8 @@ static void FramebufferSizeCallback(GLFWwindow* window, int width, int height);
 static int InitGlfw(const std::string& p_title);
 static int InitGlad();
 
+static Color CLEAR_COLOR_NORMALISED = COLOR_CLEAR.Normalized();
+
 
 // VARIABLES ----------
 GLFWwindow* window = nullptr;
@@ -45,7 +47,13 @@ bool ShouldNotClose() {
 }
 
 void BeginLoop() {
-  glClearColor(0.157, 0.157, 0.157, 1.0);
+  COLOR_CLEAR;
+  glClearColor(
+    CLEAR_COLOR_NORMALISED.r,
+    CLEAR_COLOR_NORMALISED.g,
+    CLEAR_COLOR_NORMALISED.b,
+    1.0
+    );
   glClear(GL_COLOR_BUFFER_BIT);
 }
 
