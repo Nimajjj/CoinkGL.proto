@@ -4,10 +4,9 @@
 #include "renderer/internal_renderer.h"
 
 
-InternalRenderer::InternalRenderer(const Size& scr_size) :
+InternalRenderer::InternalRenderer(const Size &scr_size) :
   screen_size(scr_size),
-  order_list(std::vector<OrderPtr>())
-{
+  order_list(std::vector<OrderPtr>()) {
   helper = new VertexHelper();
   shader = new Shader("default.vert", "default.frag");
 }
@@ -27,13 +26,14 @@ InternalRenderer::GenerateVertices() {
 
   helper->ClearVertices();
 
-  for (const auto& order : order_list) {
+  for (const auto &order: order_list) {
 
-    for (const auto& shape : order->GetShapeList()) {
+    for (const auto &shape: order->GetShapeList()) {
       AddShapeVertices(shape);
     }
 
-    Utils::Log(DEBUG, "InternalRenderer::GenerateVertices Vertices generated for order, goes from index " + std::to_string(order->GetBegin()) + " to " + std::to_string(order->GetEnd()));
+    Utils::Log(DEBUG, "InternalRenderer::GenerateVertices Vertices generated for order, goes from index " +
+                      std::to_string(order->GetBegin()) + " to " + std::to_string(order->GetEnd()));
   }
 
   helper->UpdateBufferData();
@@ -53,22 +53,22 @@ InternalRenderer::Render() {
 
   shader->Use();
 
-  for (const auto& order : order_list) {
+  for (const auto &order: order_list) {
     helper->Draw(
       order->GetDrawType(),
       order->GetBegin(),
       order->GetEnd()
-      );
+    );
   }
 }
 
 void
-InternalRenderer::QueueFree(const ShapePtr& shape) {
+InternalRenderer::QueueFree(const ShapePtr &shape) {
   queue_free_list.push_back(shape);
 }
 
 void
-InternalRenderer::QueueShape(const ShapePtr& shape) {
+InternalRenderer::QueueShape(const ShapePtr &shape) {
   // if there is no order, create one, and add the shape to it
   if (order_list.size() == 0) {
     auto new_order = OrderPtr(new Order(shape->GetShapeType(), 0, shape->GetVerticesCount()));
@@ -94,8 +94,8 @@ InternalRenderer::QueueShape(const ShapePtr& shape) {
       shape->GetShapeType(),
       order_list.back()->GetEnd(),
       order_list.back()->GetEnd() + shape->GetVerticesCount()
-      )
-    );
+    )
+  );
 
   new_order->AddShape(shape);
   new_order->SetDrawType(shape->GetDrawType());
@@ -104,10 +104,9 @@ InternalRenderer::QueueShape(const ShapePtr& shape) {
 }
 
 
-
 void
-InternalRenderer::AddShapeVertices(const ShapePtr& p_shape) {
-  Shape* shape = p_shape.get();
+InternalRenderer::AddShapeVertices(const ShapePtr &p_shape) {
+  Shape *shape = p_shape.get();
 
   switch (shape->GetShapeType()) {
     case SHAPE_BASE:
@@ -143,8 +142,8 @@ InternalRenderer::AddShapeVertices(const ShapePtr& p_shape) {
 
 
 void
-InternalRenderer::AddTriangleVertices(Shape* shape) {
-  auto triangle = static_cast<Triangle*>(shape);
+InternalRenderer::AddTriangleVertices(Shape *shape) {
+  auto triangle = static_cast<Triangle *>(shape);
 
   helper->VerticesPushVec2({NormalizeWidth(triangle->aPos.x), NormalizeHeight(triangle->aPos.y)});
   helper->VerticesPushColor(triangle->GetColor());
@@ -157,8 +156,8 @@ InternalRenderer::AddTriangleVertices(Shape* shape) {
 }
 
 void
-InternalRenderer::AddRectVertices(Shape* shape) {
-  auto rect = static_cast<Rect*>(shape);
+InternalRenderer::AddRectVertices(Shape *shape) {
+  auto rect = static_cast<Rect *>(shape);
 
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x), NormalizeHeight(rect->position.y)});
   helper->VerticesPushColor(rect->GetColor());
@@ -184,8 +183,8 @@ InternalRenderer::AddRectVertices(Shape* shape) {
 }
 
 void
-InternalRenderer::AddFillRectVertices(Shape* shape) {
-  auto rect = static_cast<Rect*>(shape);
+InternalRenderer::AddFillRectVertices(Shape *shape) {
+  auto rect = static_cast<Rect *>(shape);
 
   helper->VerticesPushVec2({NormalizeWidth(rect->position.x), NormalizeHeight(rect->position.y)});
   helper->VerticesPushColor(rect->GetColor());
@@ -205,16 +204,16 @@ InternalRenderer::AddFillRectVertices(Shape* shape) {
 }
 
 void
-InternalRenderer::AddPixelVertices(Shape* shape) {
-  auto pixel = static_cast<Pixel*>(shape);
+InternalRenderer::AddPixelVertices(Shape *shape) {
+  auto pixel = static_cast<Pixel *>(shape);
 
   helper->VerticesPushVec2({NormalizeWidth(pixel->position.x), NormalizeHeight(pixel->position.y)});
   helper->VerticesPushColor(pixel->GetColor());
 }
 
 void
-InternalRenderer::AddLineVertices(Shape* shape) {
-  auto line = static_cast<Line*>(shape);
+InternalRenderer::AddLineVertices(Shape *shape) {
+  auto line = static_cast<Line *>(shape);
 
   helper->VerticesPushVec2({NormalizeWidth(line->pos1.x), NormalizeHeight(line->pos1.y)});
   helper->VerticesPushColor(line->GetColor());
@@ -236,8 +235,8 @@ InternalRenderer::FreeShapes() {
   int range_modif = 0;
 
   // For each shape queued to be removed we look for the order it belongs to
-  for (const auto& shape_ptr : queue_free_list) {
-    for (const auto& order_ptr : order_list) {
+  for (const auto &shape_ptr: queue_free_list) {
+    for (const auto &order_ptr: order_list) {
 
       // If the order contains the shape, we save the vertex range of shape,
       //  and we remove the shape from the order
@@ -255,7 +254,7 @@ InternalRenderer::FreeShapes() {
     }
 
     // We remove the shape from the list of shapes
-    for (const auto& order_ptr : order_to_remove) {
+    for (const auto &order_ptr: order_to_remove) {
       order_list.erase(std::remove(order_list.begin(), order_list.end(), order_ptr), order_list.end());
     }
 

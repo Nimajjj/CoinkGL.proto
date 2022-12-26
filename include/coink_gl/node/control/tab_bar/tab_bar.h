@@ -7,20 +7,20 @@
 #include "node/control/control.h"
 
 class TabBar :
-  public Control
-{
-  public:
-    // main
-    TabBar();
-    ~TabBar() { Free(); }
+  public Control {
+ public:
+  // main
+  TabBar();
 
-    // getters
-    const std::string& GetTitle() const { return title; }
+  ~TabBar() { Free(); }
 
-    // setters
-    void SetTitle(const std::string& t) { title = t; }
+  // getters
+  const std::string &GetTitle() const { return title; }
 
-  protected:
-    // properties
-    std::string title;
+  // setters
+  void SetTitle(const std::string &t) { title = t; }
+
+ protected:
+  // properties
+  std::string title;
 };

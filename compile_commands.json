@@ -1,0 +1,152 @@
+[
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\gcc.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\glad.c.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\glad.c",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\glad.c"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\gcc.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\stb.c.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\stb.c",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\stb.c"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\coink_gl.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\coink_gl.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\coink_gl.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\button\\button.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\button\\button.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\button\\button.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\button\\check_button\\check_button.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\button\\check_button\\check_button.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\button\\check_button\\check_button.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\button\\menu_button\\menu_button.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\button\\menu_button\\menu_button.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\button\\menu_button\\menu_button.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\button\\option_button\\option_button.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\button\\option_button\\option_button.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\button\\option_button\\option_button.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\container\\container.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\container\\container.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\container\\container.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\container\\h_box_container\\h_box_container.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\container\\h_box_container\\h_box_container.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\container\\h_box_container\\h_box_container.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\container\\v_box_container\\v_box_container.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\container\\v_box_container\\v_box_container.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\container\\v_box_container\\v_box_container.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\control.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\control.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\control.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\label\\label.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\label\\label.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\label\\label.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\panel\\color_panel\\color_panel.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\panel\\color_panel\\color_panel.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\panel\\color_panel\\color_panel.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\panel\\panel.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\panel\\panel.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\panel\\panel.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\tab_bar\\tab_bar.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\tab_bar\\tab_bar.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\tab_bar\\tab_bar.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\control\\text_edit\\text_edit.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\text_edit\\text_edit.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\control\\text_edit\\text_edit.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\internal_node_renderer.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\internal_node_renderer.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\internal_node_renderer.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\manager.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\manager.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\manager.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\node\\node.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\node.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\node\\node.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\renderer\\internal_renderer.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\internal_renderer.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\internal_renderer.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\renderer\\order.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\order.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\order.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\renderer\\renderer.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\renderer.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\renderer.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\renderer\\vao\\vao.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\vao\\vao.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\vao\\vao.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\renderer\\vbo\\vbo.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\vbo\\vbo.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\vbo\\vbo.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\renderer\\vertex_helper\\vertex_helper.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\vertex_helper\\vertex_helper.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\renderer\\vertex_helper\\vertex_helper.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\shader\\shader.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\shader\\shader.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\shader\\shader.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\shape\\shape.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\shape\\shape.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\shape\\shape.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\theme\\theme.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\theme\\theme.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\theme\\theme.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\coink_gl\\utils\\utils.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\utils\\utils.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\coink_gl\\utils\\utils.cpp"
+  },
+  {
+    "directory": "D:/Development/prototypes/CoinkGL.engine.2/cmake-build-debug",
+    "command": "\"D:\\Program Files\\JetBrains\\CLion 2022.3\\bin\\mingw\\bin\\g++.exe\" -ID:/Development/prototypes/CoinkGL.engine.2/include -ID:/Development/prototypes/CoinkGL.engine.2/include/coink_gl -g -fdiagnostics-color=always -std=gnu++20 -o CMakeFiles\\CoinkGL_engine_2.dir\\src\\main.cpp.obj -c D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\main.cpp",
+    "file": "D:\\Development\\prototypes\\CoinkGL.engine.2\\src\\main.cpp"
+  }
+]

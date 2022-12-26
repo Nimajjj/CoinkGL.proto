@@ -13,6 +13,7 @@
 #include "utils/utils.h"
 #include "shader/shader.h"
 #include "renderer/renderer.h"
+#include "node/internal_node_renderer.h"
 
 namespace CoinkGL {
 // MAIN ----------
@@ -21,8 +22,8 @@ void Terminate();
 
 // LOOP ----------
 bool ShouldNotClose();
-void BeginLoop();
-void EndLoop();
+void BeginLoop(); // /!\ deprecated
+void EndLoop(); // /!\ deprecated
 
 // DEBUG ---------
 void DebugQuitOnFirstLoop();

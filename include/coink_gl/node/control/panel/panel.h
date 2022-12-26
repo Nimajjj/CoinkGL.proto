@@ -9,11 +9,12 @@
 // Panel class can't be instantiated
 // see ColorPanel and / or TexturePanel for panels usage
 class Panel :
-  public Control
-{
+  public Control {
  protected:
   // main
   Panel();
-  Panel(const NODE_TYPE& t, const std::string& n);
+
+  Panel(const NODE_TYPE &t, const std::string &n);
+
   ~Panel() { Free(); }
 };

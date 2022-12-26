@@ -23,6 +23,7 @@ class Shape {
 
   void SetColor(const Color& col) {color = col;}
   void SetType(const SHAPE_TYPE& t);
+  void SetOrigin(const Point& o) {origin = o;}
 
   uint GetVerticesCount() const {return vertices_count;}
 

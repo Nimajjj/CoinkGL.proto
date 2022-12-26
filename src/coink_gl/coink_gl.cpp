@@ -2,6 +2,7 @@
 // Created by Benjamin on 10/12/2022.
 //
 #include "coink_gl.h"
+#include "node/internal_node_renderer.h"
 
 namespace CoinkGL {
 
@@ -29,6 +30,8 @@ void Init(const Size& scr_size, const std::string& title) {
 
   Shader::SetShadersDirectory("D:/development/prototypes/CoinkGL.engine.2/ressource/shader/");
 
+  InternalNodeRenderer::Init(screen_size);
+
   Utils::Log(INFO, "CoinkGL initialisation OK");
 }
 
@@ -43,11 +46,26 @@ void Terminate() {
 
 // LOOP ----------
 bool ShouldNotClose() {
+  // loop action
+  InternalNodeRenderer::RenderCurrentScene();
+
+  // end loop
+  glfwSwapBuffers(window);
+  glfwPollEvents();
+
+  // begin loop
+  glClearColor(
+    CLEAR_COLOR_NORMALISED.r,
+    CLEAR_COLOR_NORMALISED.g,
+    CLEAR_COLOR_NORMALISED.b,
+    1.0
+    );
+  glClear(GL_COLOR_BUFFER_BIT);
+
   return !glfwWindowShouldClose(window);
 }
 
 void BeginLoop() {
-  COLOR_CLEAR;
   glClearColor(
     CLEAR_COLOR_NORMALISED.r,
     CLEAR_COLOR_NORMALISED.g,

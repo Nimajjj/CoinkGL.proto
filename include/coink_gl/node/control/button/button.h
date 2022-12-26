@@ -8,9 +8,8 @@
 
 #include "node/control/control.h"
 
-class Button:
-    public Control
-{
+class Button :
+  public Control {
  public:
   // main
   Button();
@@ -22,21 +21,21 @@ class Button:
   }
 
   // getters
-  const std::string& GetText() const { return text; }
-  const TEXT_ALIGNMENT& GetAlignment() const { return alignment; }
-  const bool& IsDisabled() const { return disabled; }
-  const bool& IsToggleMode() const { return toggle_mode; }
-  const bool& IsPressed() const { return pressed; }
-  const BUTTON_ACTION_MODE& GetActionMode() const { return action_mode; }
+  const std::string &GetText() const { return text; }
+  const TEXT_ALIGNMENT &GetAlignment() const { return alignment; }
+  const bool &IsDisabled() const { return disabled; }
+  const bool &IsToggleMode() const { return toggle_mode; }
+  const bool &IsPressed() const { return pressed; }
+  const BUTTON_ACTION_MODE &GetActionMode() const { return action_mode; }
 
   // setters
-  void SetText(const std::string& t) { text = t; }
-  void SetAlignment(const TEXT_ALIGNMENT& a) { alignment = a; }
-  void SetDisabled(const bool& d) { disabled = d; }
-  void SetToggleMode(const bool& t) { toggle_mode = t; }
-  void SetPressed(const bool& p) { pressed = p; }
-  void SetActionMode(const BUTTON_ACTION_MODE& a) { action_mode = a; }
-  void SetAction(const std::function<void()>& a) { action = a; }
+  void SetText(const std::string &t) { text = t; }
+  void SetAlignment(const TEXT_ALIGNMENT &a) { alignment = a; }
+  void SetDisabled(const bool &d) { disabled = d; }
+  void SetToggleMode(const bool &t) { toggle_mode = t; }
+  void SetPressed(const bool &p) { pressed = p; }
+  void SetActionMode(const BUTTON_ACTION_MODE &a) { action_mode = a; }
+  void SetAction(const std::function<void()> &a) { action = a; }
 
  protected:
   // properties
@@ -49,6 +48,8 @@ class Button:
   std::function<void()> action;
 
   // main
-  Button(const NODE_TYPE& t, const std::string& n);
+  Button(const NODE_TYPE &t, const std::string &n);
 
 };
+
+using ButtonPtr = std::shared_ptr<Button>;

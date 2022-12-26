@@ -8,20 +8,20 @@
 
 
 class ColorPanel :
-  public Panel
-{
-  public:
+  public Panel {
+ public:
   // main
   ColorPanel();
+
   ~ColorPanel() { Control::Free(); }
 
-    // getters
-    const Color& GetColor() const { return color; }
+  // getters
+  const Color &GetColor() const { return color; }
 
-    // setters
-    void SetColor(const Color& c) { color = c; }
+  // setters
+  void SetColor(const Color &c) { color = c; }
 
-  protected:
-    // properties
-    Color color;
+ protected:
+  // properties
+  Color color;
 };

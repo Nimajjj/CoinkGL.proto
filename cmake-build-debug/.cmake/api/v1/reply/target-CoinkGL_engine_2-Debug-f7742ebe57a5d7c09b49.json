@@ -30,13 +30,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 23,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 15,
+				"line" : 24,
 				"parent" : 0
 			},
 			{
@@ -46,21 +40,27 @@
 				"parent" : 0
 			},
 			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 24,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 7,
+				"line" : 8,
 				"parent" : 0
 			},
 			{
 				"command" : 3,
 				"file" : 0,
-				"line" : 10,
+				"line" : 11,
 				"parent" : 0
 			}
 		]
@@ -146,7 +146,12 @@
 				21,
 				22,
 				23,
-				24
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
 			]
 		}
 	],
@@ -232,7 +237,12 @@
 				21,
 				22,
 				23,
-				24
+				24,
+				25,
+				26,
+				27,
+				28,
+				29
 			]
 		}
 	],
@@ -283,6 +293,24 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/container/container.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/container/h_box_container/h_box_container.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/control/container/v_box_container/v_box_container.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
 			"path" : "src/coink_gl/node/control/control.cpp",
 			"sourceGroupIndex" : 0
 		},
@@ -314,6 +342,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 1,
 			"path" : "src/coink_gl/node/control/text_edit/text_edit.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/internal_node_renderer.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 1,
+			"path" : "src/coink_gl/node/manager.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

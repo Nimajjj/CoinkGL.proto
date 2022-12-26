@@ -9,6 +9,14 @@ namespace {
 bool all_log = true;
 bool info_log = true;
 bool debug_log = false;
+
+void NewLog(const std::string& prefix, const std::string& message) {
+  if (!all_log) return;
+  std::cout << "[" << GetCurrentDateTime() << "] ["
+            << prefix << "] : "
+            << message << "\n";
+}
+
 }
 
 static std::string GetTextLogLevel(const COINK_LOG_LEVEL& p_log_level) {
@@ -51,6 +59,26 @@ void Log(const COINK_LOG_LEVEL& p_log_level, const std::string& p_message) {
                 GetTextLogLevel(p_log_level) << "] : "
                 << p_message << "\n";
 }
+
+
+
+void FatalLog(const std::string& message) { NewLog("FATAL", message); }
+void ErrorLog(const std::string& message) { NewLog("ERROR", message); }
+void WarnLog(const std::string& message)  { NewLog("WARN", message); }
+
+void InfoLog(const std::string& message)  { 
+  if (info_log)
+    NewLog("INFO", message); 
+}
+
+void DebugLog(const std::string& message) { 
+  if (debug_log)
+    NewLog("DEBUG", message); 
+}
+
+
+
+
 
 void EnableLog() {
   all_log = true;

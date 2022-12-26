@@ -7,18 +7,18 @@
 #include "node/control/control.h"
 
 class TextEdit :
-  public Control
-{
+  public Control {
  public:
   // main
   TextEdit();
+
   ~TextEdit() { Free(); }
 
   // getters
-  const std::string& GetText() const { return text; }
+  const std::string &GetText() const { return text; }
 
   // setters
-  void SetText(const std::string& t) { text = t; }
+  void SetText(const std::string &t) { text = t; }
 
  protected:
   // properties
@@ -27,6 +27,6 @@ class TextEdit :
   bool editable;
 
   // main
-  TextEdit(const NODE_TYPE& t, const std::string& n);
+  TextEdit(const NODE_TYPE &t, const std::string &n);
 
 };
